@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>clearTimeout()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style type="text/css">
+    body {
+      margin: 0 auto;
+      max-width: 40em;
+      width: 88%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>clearTimeout()</h1>
+
+  <div id="app" aria-live="polite"></div>
+
+  <script>
+    // Log the user out after 4 seconds
+    let isActive = setTimeout(function () {
+      app.textContent = `You've been logged out.`;
+    }, 4000);
+
+    // But if they click anywhere on the page, keep them logged in
+    document.addEventListener('click', function () {
+      clearTimeout(isActive);
+      app.textContent = `You're still logged in, yay!`;
+    });
+  </script>
+</body>
+
+</html>
