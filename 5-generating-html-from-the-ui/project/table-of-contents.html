@@ -5,27 +5,8 @@
   <meta charset="utf-8">
   <title>Table of Contents</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /**
-			 * Remove animation
-			 */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -126,16 +107,6 @@
 
   <p><em>Text by <a href="https://pirateipsum.me/">Pirate Ipsum</a>.</em></p>
 
-
-  <script>
-    const tableOC = document.getElementById('table-of-contents');
-    const allH2 = document.querySelectorAll('h2')
-
-
-    for (let element of allH2) {
-      tableOC.innerHTML += `<a href="#${element.id}"><h2>${element.innerHTML}</h2></a>`;
-    }
-  </script>
 </body>
 
 </html>
