@@ -5,27 +5,8 @@
   <meta charset="utf-8">
   <title>Table of Contents - Missing IDs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /**
-			 * Remove animation
-			 */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -126,30 +107,6 @@
 
   <p><em>Text by <a href="https://pirateipsum.me/">Pirate Ipsum</a>.</em></p>
 
-
-  <script>
-    // Get the DOM elements
-    let toc = document.querySelector('#table-of-contents');
-    let headings = document.querySelectorAll('h2');
-
-    // Create the HTML
-    let html = '';
-    for (let heading of headings) {
-      if (!heading.id) {
-        heading.id = heading.textContent.toLowerCase().replaceAll(' ', '-');
-      }
-      html += `<li><a href="#${heading.id}">${heading.textContent}</a></li>`;
-    }
-
-    // If there's content, render it into the UI
-    if (html) {
-      toc.innerHTML =
-        `<p><strong>Table of Contents</strong></p>
-					<ol>
-						${html}
-					</ol>`;
-    }
-  </script>
 </body>
 
 </html>
