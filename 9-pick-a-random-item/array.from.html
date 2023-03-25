@@ -5,14 +5,8 @@
   <meta charset="utf-8">
   <title>Array.from()</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -27,18 +21,6 @@
     <button>5</button>
   </p>
 
-
-  <script>
-    let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
-    let sandwichesCopy = Array.from(sandwiches);
-    console.log(sandwichesCopy);
-
-    let btns = document.querySelectorAll('button');
-    let btnsArr = Array.from(btns, function (btn) {
-      return btn.textContent;
-    });
-    console.log(btnsArr);
-  </script>
 </body>
 
 </html>
