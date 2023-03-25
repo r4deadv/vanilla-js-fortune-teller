@@ -1,0 +1,9 @@
+body {
+  margin: 0 auto;
+  max-width: 40em;
+  width: 88%;
+}
+
+details {
+  margin-bottom: 1em;
+}
