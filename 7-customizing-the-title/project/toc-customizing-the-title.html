@@ -5,27 +5,8 @@
   <meta charset="utf-8">
   <title>Table of Contents - Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /**
-			 * Remove animation
-			 */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -141,44 +122,6 @@
 
   <p><em>Text by <a href="https://pirateipsum.me/">Pirate Ipsum</a>.</em></p>
 
-
-  <script>
-    // Get the DOM elements
-    let toc = document.querySelector('#table-of-contents');
-    let headings = document.querySelectorAll('h2');
-    const tocTitle = toc.getAttribute('data-toc')
-    /**
-     * Get the ID for a heading
-     * @param  {Node}   heading The heading
-     * @return {String}         The ID
-     */
-    function getID(heading) {
-
-      // If there's no ID, create one
-      if (!heading.id) {
-        heading.id = heading.textContent.replaceAll(' ', '-').toLowerCase();
-      }
-
-      // Return the heading ID
-      return heading.id;
-
-    }
-
-    // Create the HTML
-    let html = '';
-    for (let heading of headings) {
-      html += `<li><a href="#${getID(heading)}">${heading.textContent}</a></li>`;
-    }
-
-    // If there's content, render it into the UI
-    if (html) {
-      toc.innerHTML =
-        `<p><strong>${tocTitle ? tocTitle : "Table of Contents"}</strong></p>
-					<ol>
-						${html}
-					</ol>`;
-    }
-  </script>
 </body>
 
 </html>
