@@ -5,14 +5,8 @@
   <meta charset="utf-8">
   <title>Randomize</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">k
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -27,33 +21,6 @@
 
   <ul id="items"></ul>
 
-
-  <script>
-    const form = document.getElementById('add-item')
-    const list = document.getElementById('items')
-
-    const item = document.getElementById('item')
-
-    function addItem(event) {
-      event.preventDefault()
-
-      let formData = new FormData(form)
-      let item = formData.get('item')
-
-      if (!item) return;
-
-      addToList(item);
-      form.reset()
-    }
-
-    function addToList(item) {
-      const li = document.createElement('li')
-      li.innerText = item;
-      list.append(li)
-    }
-
-    form.addEventListener('submit', addItem)
-  </script>
 </body>
 
 </html>

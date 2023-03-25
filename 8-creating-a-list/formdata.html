@@ -5,33 +5,11 @@
   <meta charset="utf-8">
   <title>The FormData Object</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 30em;
-      width: 88%;
-    }
-
-    label,
-    input,
-    textarea {
-      display: block;
-      width: 100%;
-    }
-
-    input,
-    textarea {
-      margin-bottom: 1em;
-    }
-
-    textarea {
-      min-height: 8em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script-3.js" defer></script>
 </head>
 
-<body>
+<body id="container">
 
   <h1>The FormData Object</h1>
 
@@ -49,37 +27,6 @@
 
   </form>
 
-
-  <script>
-    // Get the form
-    let form = document.querySelector('#post');
-
-    // Get all field data from the form
-    let data = new FormData(form);
-    console.log(data);
-
-
-    // Loop through each entry
-    for (let entry of data) {
-      console.log(entry);
-    }
-
-
-    // Destructure the entries into key/value pairs
-    for (let [key, value] of data) {
-      console.log(key);
-      console.log(value);
-    }
-
-
-    // Get the value of the "userId" field
-    let userId = data.get('userId');
-    console.log(userId);
-
-
-    // Reset all fields to their original values
-    form.reset();
-  </script>
 </body>
 
 </html>
