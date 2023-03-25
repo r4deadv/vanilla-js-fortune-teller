@@ -5,14 +5,8 @@
   <meta charset="utf-8">
   <title>EventTarget.addEventListener()</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 40em;
-      width: 88%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script-2.js" defer></script>
 </head>
 
 <body>
@@ -20,17 +14,6 @@
   <button class="click-me" id="click-me-1">Click Me</button>
 
 
-  <script>
-    // Get the element
-    let btn = document.querySelector('#click-me-1');
-
-    // Listen for clicks on it
-    btn.addEventListener('click', function (event) {
-      console.log('The button was clicked!');
-      console.log(event); // The event details
-      console.log(event.target); // The clicked element
-    });
-  </script>
 </body>
 
 </html>
