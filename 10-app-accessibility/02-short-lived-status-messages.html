@@ -5,24 +5,8 @@
   <meta charset="utf-8">
   <title>Short-Lived Status Message</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style type="text/css">
-    body {
-      margin: 0 auto;
-      max-width: 30em;
-      width: 88%;
-    }
-
-    label,
-    input {
-      display: block;
-      width: 100%;
-    }
-
-    input {
-      margin-bottom: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="script-2.js" defer></script>
 </head>
 
 <body>
@@ -41,25 +25,6 @@
     <div id="notification" aria-live="polite"></div>
   </form>
 
-
-  <script>
-    let form = document.querySelector('form');
-    form.addEventListener('submit', function (event) {
-
-      // Stop the form from reloading the page
-      event.preventDefault();
-
-      // Display a notification
-      let notification = document.querySelector('#notification');
-      notification.textContent = 'Your password was updated!';
-
-      // Clear the status message after 4 seconds
-      setTimeout(function () {
-        notification.textContent = '';
-      }, 4000);
-
-    });
-  </script>
 </body>
 
 </html>
